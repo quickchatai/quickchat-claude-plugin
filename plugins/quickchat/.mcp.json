@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "quickchat": {
+      "type": "http",
+      "url": "https://app.quickchat.ai/v1/api/mcp/rpc"
+    }
+  }
+}

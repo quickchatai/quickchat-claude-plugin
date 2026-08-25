@@ -1,0 +1,24 @@
+{
+  "name": "quickchat",
+  "displayName": "Quickchat AI",
+  "description": "Build, analyze, test, and improve customer support AI Agents from Claude.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Quickchat AI",
+    "email": "support@quickchat.ai",
+    "url": "https://quickchat.ai"
+  },
+  "homepage": "https://docs.quickchat.ai/manage-with-ai/",
+  "repository": "https://github.com/quickchatai/quickchat-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "ai-agent-builder",
+    "customer-support",
+    "chatbot",
+    "chatbot-analytics",
+    "conversation-analytics",
+    "knowledge-base",
+    "csat",
+    "quickchat"
+  ]
+}

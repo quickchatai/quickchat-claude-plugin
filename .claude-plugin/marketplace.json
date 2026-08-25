@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "quickchat",
+  "description": "Build, analyze, and improve customer support AI Agents with Quickchat AI.",
+  "owner": {
+    "name": "Quickchat AI",
+    "email": "support@quickchat.ai",
+    "url": "https://quickchat.ai"
+  },
+  "plugins": [
+    {
+      "name": "quickchat",
+      "source": "./plugins/quickchat",
+      "displayName": "Quickchat AI",
+      "description": "Build, analyze, test, and improve customer support AI Agents from Claude. Bundles the Quickchat remote MCP connector with workflow skills for launching an Agent from a website, reviewing performance, triaging conversations, and improving knowledge and settings.",
+      "category": "productivity",
+      "tags": [
+        "ai-agent-builder",
+        "customer-support",
+        "chatbot-analytics",
+        "conversation-analytics",
+        "knowledge-base"
+      ]
+    }
+  ]
+}
