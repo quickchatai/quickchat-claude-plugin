@@ -12,7 +12,7 @@
       "name": "quickchat",
       "source": "./plugins/quickchat",
       "displayName": "Quickchat AI",
-      "description": "Build, analyze, test, and improve customer support AI Agents from Claude. Bundles the Quickchat remote MCP connector with workflow skills for launching an Agent from a website, reviewing performance, triaging conversations, and improving knowledge and settings.",
+      "description": "Build, deploy, analyze, and improve customer support AI Agents from Claude. Bundles the hosted Quickchat AI connector with skills for launching an Agent from a website, putting it live on its channels, reviewing performance, triaging conversations, and improving knowledge and settings.",
       "category": "productivity",
       "tags": [
         "ai-agent-builder",

@@ -10,7 +10,6 @@ description: >-
   improve-agent).
 metadata:
   author: quickchat-ai
-  version: "1.0"
 ---
 
 # Performance review
@@ -52,3 +51,11 @@ Turn a Quickchat AI Agent's analytics into a short, decision-ready review.
 3. Rising topics worth attention.
 4. 2-3 concrete, prioritized recommendations.
 Keep it scannable; lead with the metric that moved most.
+
+For period comparisons, `compare_periods` supplies only overview metrics. Call
+`get_topics`, `get_csat` and, when applicable, `get_ttfr` separately for EACH
+period. Pass `start_date=period_a_start`, `end_date=period_a_end` for the
+previous period, then `start_date=period_b_start`, `end_date=period_b_end` for
+the current period, using the same date values as `compare_periods`. If either
+period has no CSAT ratings, report the comparison unavailable; never treat
+missing data as zero.
