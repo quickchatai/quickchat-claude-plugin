@@ -1,8 +1,8 @@
 {
   "name": "quickchat",
   "displayName": "Quickchat AI",
-  "description": "Build, analyze, test, and improve customer support AI Agents from Claude.",
-  "version": "1.0.0",
+  "description": "Build, deploy, analyze, and improve customer support AI Agents from Claude.",
+  "version": "1.1.0",
   "author": {
     "name": "Quickchat AI",
     "email": "support@quickchat.ai",
@@ -20,5 +20,10 @@
     "knowledge-base",
     "csat",
     "quickchat"
-  ]
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://docs.quickchat.ai/manage-with-ai/",
+  "supportUrl": "https://quickchat.ai/contact",
+  "privacyPolicyUrl": "https://quickchat.ai/privacy",
+  "termsOfServiceUrl": "https://quickchat.ai/terms"
 }

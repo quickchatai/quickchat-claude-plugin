@@ -1,12 +1,13 @@
 ---
-description: Build a new Quickchat AI Agent from a website
+description: Build a Quickchat AI Agent from a website
 argument-hint: "[website URL]"
 ---
 
-Build a new Quickchat AI Agent from: $ARGUMENTS
+Build a Quickchat AI Agent from: $ARGUMENTS
 
-If no URL is given, ask for one — or offer the interview path for a user with no
-website yet. Creating an Agent and rebuilding one from a URL both require
-explicit confirmation; ask before either.
+If no URL is given, ask for one, or offer the interview path for a user with no
+website yet. Set up the empty Agent the account already has before creating
+another, and ask before rebuilding an Agent that is already configured, because
+that overwrites it.
 
 Follow the `launch-agent` skill.
