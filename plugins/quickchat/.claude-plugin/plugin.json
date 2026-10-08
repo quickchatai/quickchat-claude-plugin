@@ -1,8 +1,8 @@
 {
   "name": "quickchat",
   "displayName": "Quickchat AI",
-  "description": "Build, deploy, analyze, and improve customer support AI Agents from Claude.",
-  "version": "1.1.0",
+  "description": "Build a customer support AI Agent from your website and put it live on your site, Discord, Telegram, Instagram, Slack or email. Review its conversations, CSAT and handoffs, triage what needs a human, and improve its knowledge and settings without leaving Claude. Sign in to Quickchat, or create a free account, when you first connect.",
+  "version": "1.1.1",
   "author": {
     "name": "Quickchat AI",
     "email": "support@quickchat.ai",
@@ -21,9 +21,5 @@
     "csat",
     "quickchat"
   ],
-  "icon": "./assets/icon.png",
-  "documentationUrl": "https://docs.quickchat.ai/manage-with-ai/",
-  "supportUrl": "https://quickchat.ai/contact",
-  "privacyPolicyUrl": "https://quickchat.ai/privacy",
-  "termsOfServiceUrl": "https://quickchat.ai/terms"
+  "icon": "./assets/icon.png"
 }
