@@ -12,7 +12,7 @@
       "name": "quickchat",
       "source": "./plugins/quickchat",
       "displayName": "Quickchat AI",
-      "description": "Build, deploy, analyze, and improve customer support AI Agents from Claude. Bundles the hosted Quickchat AI connector with skills for launching an Agent from a website, putting it live on its channels, reviewing performance, triaging conversations, and improving knowledge and settings.",
+      "description": "Build a customer support AI Agent from your website and put it live on your site, Discord, Telegram, Instagram, Slack or email. Review its conversations, CSAT and handoffs, triage what needs a human, and improve its knowledge and settings without leaving Claude. Sign in to Quickchat, or create a free account, when you first connect.",
       "category": "productivity",
       "tags": [
         "ai-agent-builder",
