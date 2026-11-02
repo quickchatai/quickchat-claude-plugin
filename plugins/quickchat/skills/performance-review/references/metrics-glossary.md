@@ -14,7 +14,11 @@ analytics tools. Load this when you need to explain or report a specific metric.
 - `total_resolved` — confirmed plus assumed resolutions.
 - `total_confirmed_resolutions` — the customer or agent confirmed resolution.
 - `total_assumed_resolutions` — inferred resolved (e.g. the customer stopped).
-- `resolution_rate` — `total_resolved` as a percentage of conversations.
+- `total_unresolved` — conversations the AI didn't resolve.
+- `resolution_rate` — `total_resolved` as a percentage of `total_resolved` plus
+  `total_unresolved`. Missing when nothing was counted, which is not 0%.
+- `total_small_talk` — conversations with only greetings and no question; not
+  counted in `resolution_rate`.
 - `resolution_by_day` — daily resolution breakdown for trend lines.
 
 ## Handoffs

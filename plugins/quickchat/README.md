@@ -2,7 +2,7 @@
 
 Build, deploy, analyze, and improve customer support AI Agents without leaving Claude.
 
-Quickchat AI connects Claude to your Quickchat account. Ask Claude to build an AI Agent from your website, put it live on your site or in Discord, Telegram, Instagram, Slack or email, review how it performs, triage the conversations that need a human, and improve its knowledge and settings. It works in Claude on the web and desktop, in Cowork, and in Claude Code.
+Quickchat AI connects Claude to your Quickchat account. Ask Claude to build an AI Agent from your website, try it with a real customer question, put it live on your site or in WhatsApp, Discord, Telegram, Instagram, Slack or email, review how it performs, triage the conversations that need a human, and improve its knowledge and settings. It works in Claude on the web and desktop, in Cowork, and in Claude Code.
 
 ## Get started
 
@@ -18,7 +18,7 @@ Quickchat AI connects Claude to your Quickchat account. Ask Claude to build an A
 
 | Skill | What it does |
 |---|---|
-| `launch-agent` | Sets up an Agent from a website or a short interview |
+| `launch-agent` | Sets up an Agent from a website or a short interview, then tries it with a customer question you confirm |
 | `deploy-agent` | Reports which channels are live and connects new ones |
 | `performance-review` | Turns analytics into a prioritized review |
 | `conversation-triage` | Finds the conversations that need a human, then assigns or resolves the ones you approve |
@@ -39,7 +39,7 @@ Quickchat AI connects Claude to your Quickchat account. Ask Claude to build an A
 ## Try it
 
 ```
-Build a customer support AI Agent from my website and prepare it for launch.
+Build my AI Agent from my website, then let me try one customer question here.
 Put my AI Agent on my website and connect it to Telegram.
 Review my AI Agent's last 7 days and tell me the three highest-impact improvements.
 Find unresolved and low-rated conversations, group the causes, and recommend fixes.
