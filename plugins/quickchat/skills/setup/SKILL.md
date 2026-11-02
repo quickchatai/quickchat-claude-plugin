@@ -22,10 +22,12 @@ It authenticates with OAuth, so there is no API key to paste.
   it, then connect it. The same connector is listed in the Claude Directory as
   Quickchat AI, where the button reads **Connect to Claude**.
 - **Claude Code:** run `/mcp`, choose the Quickchat server and sign in.
+- **Cursor:** open Customize, find the Quickchat MCP server under the installed
+  plugin and complete its sign-in prompt. Enable the server if it is disabled.
 
-Either way a Quickchat sign-in page opens in the browser. Sign in with a
+A Quickchat sign-in page opens in the browser. Sign in with a
 Quickchat account, or create one: signing up here also creates a free AI Agent.
-Approve, and the browser returns to Claude.
+Approve, and return to the AI app that started the connection.
 
 ## Confirm it worked
 
