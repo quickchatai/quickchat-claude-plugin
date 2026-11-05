@@ -4,11 +4,11 @@ description: >-
   Configure a Quickchat AI Agent from scratch, end to end: set up the empty
   Agent the account already has (or provision one when every Agent is already
   configured), build it from a website URL or from a short interview when there
-  is no site, then show the generated configuration and how to test it. Use when
-  the user asks to create, build, launch, set up, or spin up a new Agent, to
-  make an Agent from a website or URL, or when they have just connected
-  Quickchat and have nothing set up yet. Not for editing an established Agent
-  (use improve-agent).
+  is no site, then run a confirmed customer question and show the actual reply.
+  Use when the user asks to create, build, launch, set up, or spin up a new
+  Agent, to make an Agent from a website or URL, or when they have just
+  connected Quickchat and have nothing set up yet. Not for editing an
+  established Agent (use improve-agent).
 metadata:
   author: quickchat-ai
 ---
@@ -18,6 +18,8 @@ metadata:
 Stand up a working Agent in one guided flow. Most people running this have just
 connected Quickchat and already have an empty Agent, so configure THAT one and
 build something before you report anything.
+An OAuth connection alone is not a request to build or run a test. Start this
+flow when the user asks for it.
 
 ## Before you start
 1. Call `list_scenarios`. Connecting Quickchat already created an Agent, so if any
@@ -42,8 +44,11 @@ build something before you report anything.
    content to any existing knowledge, so run it on an Agent that holds nothing
    yet; on an already-configured Agent, ask first.
 3. Poll `get_assistant_settings` until `onboarding_from_url_completed` is true.
+   Stop if `onboarding_from_url_blocked` appears; explain its `message` and ask
+   for a usable source instead of rerunning the rejected URL.
    If it reports `onboarding_progress_tracked` false there is no completion
-   signal — read the settings once after ~60s instead.
+   signal. Read the settings once after about 60 seconds and verify the persona
+   and knowledge before testing; do not claim a pending or failed build is ready.
 4. Show what was generated: the name, the main prompt, the guidelines and the
    language it picked.
 
@@ -84,12 +89,20 @@ create the action without it and have the user add the credential to the action
 in the Quickchat dashboard (Actions page), then test it there.
 
 ## Close by making it real
-1. `get_deployment_info` — give them the widget embed snippet and the public chat
-   link.
-2. Tell them they can talk to it right now at
+1. Once setup is complete, ask for one customer question or suggest one grounded
+   in the knowledge just added. Explain that a test uses AI credits and can run
+   active AI Actions. Confirm the question and any action before testing.
+2. Call `send_message_to_agent` with the same scenario_id and the confirmed
+   question as `message`. Show the actual Agent reply here. A handoff placeholder,
+   allowance notice or error is not a successful AI answer; explain the result and resolve it
+   before claiming the Agent works. Do not invent an answer or silently retry a
+   call that may have run an Action.
+3. After an actual reply, offer one next step: improve that answer or share the
+   Agent. If they choose sharing, call `get_deployment_info` and give them the
+   widget snippet and public chat link. The preview remains available at
    `https://app.quickchat.ai/i/<scenario_id>/ai-preview`.
-3. Offer one concrete next step (add knowledge, tune the persona via
-   improve-agent).
+4. If the user declines testing or explicitly wants deployment, respect that
+   choice and provide the deployment information without claiming a test passed.
 
 ## Guardrails
 - Configure the Agent the account already has. Create at most ONE Agent per
@@ -104,4 +117,5 @@ in the Quickchat dashboard (Actions page), then test it there.
 
 ## Output
 Confirm the Agent's name and scenario_id, summarize the configuration you set,
-and give the preview link plus 1-2 next steps.
+and show the actual test reply or clearly state why the test did not run or did
+not produce an AI answer. Offer one next step; do not end a requested test at a link.

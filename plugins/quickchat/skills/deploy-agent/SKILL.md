@@ -4,11 +4,12 @@ description: >-
   Put a configured Quickchat AI Agent in front of real users: report which
   channels are live, then connect the ones the user wants. The website widget,
   public chat page, the Agent's own MCP endpoint, Discord, Telegram, Instagram,
-  Slack and Email all connect through the tools here, without sending the user
-  to the dashboard. Use when the user asks to deploy, publish, go live, share
-  the Agent, embed it on a site, or connect or integrate it with Telegram,
-  Discord, Instagram, Slack, email, WhatsApp or any other channel. Not for
-  building or configuring the Agent itself (use launch-agent or improve-agent).
+  WhatsApp, Slack and Email all start through the tools here, with browser
+  consent and any required setup choices. Use when the user asks to deploy,
+  publish, go live, share the Agent, embed it on a site, or connect or integrate
+  it with Telegram, Discord, Instagram, Slack, email, WhatsApp or any other
+  channel. Not for building or configuring the Agent itself (use launch-agent or
+  improve-agent).
 metadata:
   author: quickchat-ai
 ---
@@ -24,9 +25,13 @@ once instead of guessing.
 1. Resolve the Agent: call `list_scenarios` and match the name to its
    `scenario_id`. If several qualify, ask which one.
 2. Call `get_deployment_info` and read `channels` — that is the verified state.
-   A channel listed in `connected` is live; `not_configured` is a definite no;
+   A channel listed in `connected` has configured routing;
+   `configured_but_inactive` is set up but not live right now;
+   `not_configured` is a definite no;
    `not_checked` (or absent from all four lists) means you could not verify it,
    so say that rather than guessing.
+   A configured WhatsApp route does not prove current Meta permissions or
+   delivery. Ask the user to check an actual reply in WhatsApp.
 3. A channel name is never a website. When the user says "connect Telegram" or
    "put it on Instagram", that is a `connect_agent_channel` call — do NOT
    scrape telegram.com or instagram.com as a knowledge source, and do NOT
@@ -52,9 +57,20 @@ how long it works.
   creator) account the Agent should answer DMs for; they sign in with that
   account and approve message access. This cannot be completed for them: give
   them the link and tell them which account to sign in with.
+- **WhatsApp** (`channel`=whatsapp): returns a one-time link, valid for about
+  10 minutes and only for the requesting Quickchat user. They open it signed
+  in to Quickchat, finish Meta's WhatsApp Embedded Signup and consent, and
+  complete any business account or phone selection when Quickchat reopens.
+  Never ask for Meta access tokens in chat. After they finish, read
+  `get_deployment_info.whatsapp`: `pending_account_selection` means they still
+  need to choose an account, even if a previous route remains in
+  `channels.connected`. Ask them to message
+  the connected number from WhatsApp to check the Agent's reply. Testing with
+  `send_message_to_agent` does not test WhatsApp delivery.
 - **Slack** (`channel`=slack): returns a workspace-install link. It needs no
-  Quickchat sign-in and does not expire, but anyone who opens it can connect
-  their own workspace to this Agent — pass it only to the intended person.
+  Quickchat sign-in, so anyone who opens it can connect their own workspace
+  to this Agent — pass it only to the intended person. It expires in about
+  10 minutes; if it lapses, mint a fresh one instead of resending the old link.
 - **Email** (`channel`=email): provisions the Agent's dedicated inbound
   address, switches the channel on, and returns `inbound_address`. Mail sent
   or forwarded there is answered by the Agent; to cover an existing support
@@ -71,7 +87,7 @@ how long it works.
   `note` saying the surface is switched off and where to enable it.
 
 ## Dashboard-only channels
-WhatsApp, Facebook Messenger, Intercom, Zendesk and HubSpot are set up on the
+Facebook Messenger, Intercom, Zendesk and HubSpot are set up on the
 Quickchat dashboard's Integrations page, and Shopify from the Shopify App
 Store or that same page — their setup needs a Meta business login, a
 page-selection step, a store install, or API credentials that must not travel
@@ -82,6 +98,8 @@ already are; never present a dashboard path for the channels listed above.
 1. After the user says they finished a link flow, call `get_deployment_info`
    again and confirm the channel moved to `connected` before declaring
    victory. Discord and Instagram confirm within moments of approval.
+   For WhatsApp, also check `whatsapp.pending_account_selection` before
+   reporting setup complete. Delivery needs a real reply in WhatsApp.
 2. Offer to test with `send_message_to_agent` — one call sends a real visitor
    message and returns the reply. It spends an AI credit and can fire the
    Agent's live AI Actions, so ask before sending.
