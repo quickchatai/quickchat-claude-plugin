@@ -1,0 +1,17 @@
+{
+  "name": "quickchat",
+  "owner": {
+    "name": "Quickchat AI",
+    "email": "support@quickchat.ai"
+  },
+  "metadata": {
+    "description": "Build, analyze, and improve customer support AI Agents with Quickchat AI."
+  },
+  "plugins": [
+    {
+      "name": "quickchat",
+      "source": "./plugins/quickchat",
+      "category": "productivity"
+    }
+  ]
+}
