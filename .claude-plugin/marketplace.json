@@ -12,7 +12,7 @@
       "name": "quickchat",
       "source": "./plugins/quickchat",
       "displayName": "Quickchat AI",
-      "description": "Build a customer support AI Agent from your website, try it with a real customer question, and put it live on your site, WhatsApp, Discord, Telegram, Instagram, Slack or email. Review its conversations, CSAT and handoffs, triage what needs a human, and improve its knowledge and settings without leaving Claude. Sign in to Quickchat, or create a free account, when you first connect.",
+      "description": "Build a customer support AI Agent from your website, try it with a real customer question, and put it live on your site, WhatsApp, Discord, Telegram, Instagram, Slack or email. Review its conversations, CSAT and handoffs, triage what needs a human, and improve its knowledge, settings and AI Actions without leaving Claude. Sign in to Quickchat, or create a free account, when you first connect.",
       "category": "productivity",
       "tags": [
         "ai-agent-builder",

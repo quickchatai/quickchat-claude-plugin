@@ -7,7 +7,7 @@ description: >-
   configuration edits and knowledge-base additions. Apply changes only after the
   user approves each one. Use when the user asks to improve, tune, optimize,
   fix, or update an Agent, add knowledge, or change its persona, greeting,
-  language, or profile picture.
+  conversation starters, language, profile picture, or AI Actions.
 metadata:
   author: quickchat-ai
 ---
@@ -76,3 +76,5 @@ Present proposals as a before -> after diff, then STOP for approval.
 ## Output
 A short report: top issues (ranked, one example each), the proposed changes as a
 diff, and — if you applied any — a confirmation of what changed.
+
+For AI Action creation, editing or multi-step integrations, use `references/action-workflows.md` to inspect existing configurations, connect memory handoffs, configure useful options and test the requested outcome.
