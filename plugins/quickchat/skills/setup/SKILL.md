@@ -54,7 +54,7 @@ plan's limits.
 | The user wants to | Skill |
 |---|---|
 | Build a new Agent from a website or an interview | `launch-agent` |
-| Put an Agent live on a website, chat page, Discord, Telegram, Instagram, Slack or email | `deploy-agent` |
+| Put an Agent live on a website, chat page, WhatsApp, Discord, Telegram, Instagram, Slack or email | `deploy-agent` |
 | See how an Agent is performing | `performance-review` |
 | Find conversations that need a human | `conversation-triage` |
 | Audit and improve settings or knowledge | `improve-agent` |

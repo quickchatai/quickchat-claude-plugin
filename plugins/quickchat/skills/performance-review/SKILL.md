@@ -36,7 +36,10 @@ Turn a Quickchat AI Agent's analytics into a short, decision-ready review.
 
 ## Read the numbers correctly
 - `resolution_rate` already combines confirmed and assumed resolutions; report it
-  as a percentage of conversations.
+  as a percentage of conversations with a question (`total_resolved` plus
+  `total_unresolved`), not of all conversations. Small talk (`total_small_talk`)
+  is not counted. A missing `resolution_rate` means nothing was counted in that
+  period, not 0%.
 - `get_csat` empty means no CSAT was received, NOT a low score — say "no CSAT
   data" rather than implying dissatisfaction.
 - `get_ttfr` measures HUMAN responders after a handoff, in seconds, not
