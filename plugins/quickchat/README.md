@@ -65,7 +65,7 @@ Find unresolved and low-rated conversations, group the causes, and recommend fix
 
 - Privacy policy: https://quickchat.ai/privacy
 - Terms: https://quickchat.ai/terms
-- Documentation: https://docs.quickchat.ai/manage-with-ai/
+- Documentation: https://quickchat.ai/docs/manage-with-ai
 - Support: support@quickchat.ai or https://quickchat.ai/contact
 
 ## License

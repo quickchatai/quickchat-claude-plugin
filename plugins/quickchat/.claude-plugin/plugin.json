@@ -8,7 +8,7 @@
     "email": "support@quickchat.ai",
     "url": "https://quickchat.ai"
   },
-  "homepage": "https://docs.quickchat.ai/manage-with-ai/",
+  "homepage": "https://quickchat.ai/docs/manage-with-ai",
   "repository": "https://github.com/quickchatai/quickchat-claude-plugin",
   "license": "MIT",
   "keywords": [
@@ -22,7 +22,7 @@
     "quickchat"
   ],
   "icon": "./assets/icon.png",
-  "documentationUrl": "https://docs.quickchat.ai/manage-with-ai/",
+  "documentationUrl": "https://quickchat.ai/docs/manage-with-ai",
   "supportUrl": "https://quickchat.ai/contact",
   "privacyPolicyUrl": "https://quickchat.ai/privacy",
   "termsOfServiceUrl": "https://quickchat.ai/terms"
