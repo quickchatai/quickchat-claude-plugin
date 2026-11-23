@@ -82,8 +82,10 @@ retrain step.
 ## Optional — connect a system
 If they name something the Agent should reach (an order lookup, a booking system,
 an internal API), offer `create_http_request_action`, then
-`test_http_request_action` to prove it works. It takes no confirm argument. Skip
-this unless they raise it, and never invent an endpoint.
+`test_http_request_action` to prove it works. It takes no confirm argument; a
+non-GET test is sent only when `confirm_side_effects` is true, set after the
+user agrees to that real request. Skip this unless they raise it, and never
+invent an endpoint.
 Never ask for an API key, token or password in this chat. If the API needs one,
 create the action without it and have the user add the credential to the action
 in the Quickchat dashboard (Actions page), then test it there.

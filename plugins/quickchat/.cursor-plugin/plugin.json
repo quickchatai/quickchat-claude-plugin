@@ -1,12 +1,12 @@
 {
   "name": "quickchat",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Build customer support AI Agents, review conversations and performance, and improve knowledge and settings through your Quickchat account.",
   "author": {
     "name": "Quickchat AI",
     "email": "support@quickchat.ai"
   },
-  "homepage": "https://docs.quickchat.ai/manage-with-ai/",
+  "homepage": "https://quickchat.ai/docs/manage-with-ai",
   "repository": "https://github.com/quickchatai/quickchat-claude-plugin",
   "license": "MIT",
   "keywords": [
