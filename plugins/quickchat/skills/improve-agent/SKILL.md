@@ -78,3 +78,5 @@ A short report: top issues (ranked, one example each), the proposed changes as a
 diff, and — if you applied any — a confirmation of what changed.
 
 For AI Action creation, editing or multi-step integrations, use `references/action-workflows.md` to inspect existing configurations, connect memory handoffs, configure useful options and test the requested outcome.
+
+Procedures hold the steps the Agent follows only in one situation, such as a return, a cancellation or a VIP customer, so the main prompt and guidelines stay short. Read them with `get_procedures` (with procedure_id for the full instructions) and change them with `manage_procedure` only after the user approves: operation=save creates or edits one, and operation=delete also needs `expected_name` and confirm=true. `references/procedures.md` explains when to use one and how to write it.

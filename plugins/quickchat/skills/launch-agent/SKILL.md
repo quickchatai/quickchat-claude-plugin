@@ -46,6 +46,8 @@ flow when the user asks for it.
 3. Poll `get_assistant_settings` until `onboarding_from_url_completed` is true.
    Stop if `onboarding_from_url_blocked` appears; explain its `message` and ask
    for a usable source instead of rerunning the rejected URL.
+   If `onboarding_from_url_advisory` comes with completion, the page had little
+   text: relay its `message` before testing.
    If it reports `onboarding_progress_tracked` false there is no completion
    signal. Read the settings once after about 60 seconds and verify the persona
    and knowledge before testing; do not claim a pending or failed build is ready.
